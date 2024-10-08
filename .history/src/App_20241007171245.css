@@ -1,0 +1,44 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.main {
+  text-align: left;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-btn {
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  padding: 0.5em 1em;
+  font-family: "Playfair Display", serif;
+  font-size: 1em;
+}
+
+.task-btn {
+  padding: 0.5em 1em;
+  border: 1px solid;
+  background-color: white;
+  width: 6em;
+  height: 2.75em;
+  font-family: "Playfair Display", serif;
+  font-size: 1em;
+}
+
+.form-input {
+  padding: 0.5em 1em;
+  border: 1px solid;
+}
+
+div h3 {
+  padding-right: 12em;
+}

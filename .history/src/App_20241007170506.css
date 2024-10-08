@@ -1,0 +1,29 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-btn {
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+.task-btn {
+  padding: 0.5em 1em;
+  border: 1px solid;
+}
+
+.form-input {
+  padding: 0.5em 1em;
+  border: 1px solid;
+}
