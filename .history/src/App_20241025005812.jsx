@@ -77,16 +77,16 @@ function App() {
         </form>
 
         <div className='buttons'>
-          <button onClick={() => setFilter('all')} className='list-btn-all'>All</button>
-          <button onClick={() => setFilter('completed')} className='list-btn-completed'>Completed</button>
-          <button onClick={() => setFilter('pending')} className='list-btn-pending'>Pending</button>
+          <button className='list-btn-all'>All</button>
+          <button className='list-btn-completed'>Completed</button>
+          <button className='list-btn-pending'>Pending</button>
         </div>
 
         <h2>You have {currentTasks} tasks remaining</h2>
 
         {/* task list */}
         <div>
-          {filteredButtons().map(task => (
+          {addTask.map(task => (
             <div className='task-list' key={task.id}> 
               <input 
                 type="checkbox" 

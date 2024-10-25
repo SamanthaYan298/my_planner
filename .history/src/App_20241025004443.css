@@ -55,29 +55,14 @@ div h3 {
 
 .buttons {
   display: flex;
-  gap: 20px;
-  padding-top: 2em;
+  gap: 8px;
 }
 
 .list-btn-all,
 .list-btn-completed,
 .list-btn-pending {
+  width: 80px;
   height: 40px;
   font-family: "Playfair Display", serif;
   font-size: 1em;
-  border: 1px solid black;
-  background-color: white;
-  cursor: pointer;
-}
-
-.list-btn-all {
-  width: 50px;
-}
-
-.list-btn-completed {
-  width: 100px;
-}
-
-.list-btn-pending {
-  width: 80px;
 }

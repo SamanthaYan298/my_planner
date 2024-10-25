@@ -5,8 +5,7 @@ const data = [
   {
     id: 1,
     title: 'Task 1',
-    checked: false,
-    task: 'pending'
+    checked: false
   },
   {
     id: 2,
@@ -25,7 +24,6 @@ function App() {
   const [tasks, setTasks] = useState(""); // hold the current list of tasks and update the tasks.
   const [addTask, setAddTask] = useState(data);
   const currentTasks = addTask.filter(task => !task.checked).length;
-  const [filter, setFilter] = useState('all');
 
   function handleChange(e) {
     setTasks(e.target.value);
@@ -38,15 +36,6 @@ function App() {
       setAddTask([...addTask, {id: addTask.length + 1, title: tasks}]);
       setTasks(''); // clear the input after adding new tasks.
     }
-  }
-
-  function filteredButtons() {
-    if (filter === 'completed') {
-      return addTask.filter(task => task.checked);
-    } else if (filter === 'pending') {
-      return addTask.filter(task => !task.checked);
-    }
-    return addTask;
   }
 
   function handleDelete(taskId) {
@@ -77,16 +66,16 @@ function App() {
         </form>
 
         <div className='buttons'>
-          <button onClick={() => setFilter('all')} className='list-btn-all'>All</button>
-          <button onClick={() => setFilter('completed')} className='list-btn-completed'>Completed</button>
-          <button onClick={() => setFilter('pending')} className='list-btn-pending'>Pending</button>
+          <button className='list-btn'>All</button>
+          <button className='list-btn'>Completed</button>
+          <button className='list-btn'>Pending</button>
         </div>
 
         <h2>You have {currentTasks} tasks remaining</h2>
 
         {/* task list */}
         <div>
-          {filteredButtons().map(task => (
+          {addTask.map(task => (
             <div className='task-list' key={task.id}> 
               <input 
                 type="checkbox" 

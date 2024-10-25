@@ -86,7 +86,7 @@ function App() {
 
         {/* task list */}
         <div>
-          {filteredButtons().map(task => (
+          {addTask.map(task => (
             <div className='task-list' key={task.id}> 
               <input 
                 type="checkbox" 
